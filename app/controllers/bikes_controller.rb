@@ -18,11 +18,6 @@ class BikesController < ApplicationController
     @bike.destroy!
 
     redirect_to root_path, status: :see_other
-
-    respond_to do |format|
-      format.html { redirect_to bikes_url, notice: 'Bike was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private
